@@ -3,20 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delicias da Bolota - Menu</title>
+    <title>DARSAMO BITES - Menu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="header-top">
-                <h1>DELICIAS DA BOLOTA</h1>
-                <h2>CAFETERIA</h2>
-                <div class="dark-mode-toggle">
-                    <button id="darkModeToggle">Toggle Dark Mode</button>
+            <div class="header-content">
+                <div class="logo-title-container">
+                    <img src="logo.png" alt="Delicias da Bolota Logo" class="logo">
+                    <div class="titles">
+                        <h1>DARSAMO BITES </h1>
+                        <h2>CAFETARIA</h2>
+                        <h3>Project by Daniel Darsamo</h3>
+                    </div>
+                </div>
+                <div class="dark-mode-toggle-container">
+                    <label class="dark-mode-toggle">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider"></span>
+                        <span class="icons">
+                            <span class="sun">☀️</span>
+                            <span class="moon">🌙</span>
+                        </span>
+                    </label>
                 </div>
             </div>
-            <h3>Project by Daniel Darsamo</h3>
             <p class="hours">Open Hours: 8 am - 5pm</p>
             <nav class="category-nav">
                 <button class="category-btn active" data-category="drinks">Drinks</button>
@@ -25,160 +37,189 @@
         </header>
 
         <main>
-            <section class="menu-section" id="drinks-section">
-                <h2>DRINKS</h2>
-                
+            <section class="menu-section active-section" id="drinks-section">
                 <div class="menu-category">
-                    <h3>COFFEE</h3>
+                    <h3><span class="category-icon">☕</span> COFFEE</h3>
                     <div class="menu-items">
                         <div class="menu-item">
                             <span class="item-name">Espresso</span>
                             <span class="price">70 MZN</span>
+                            <button class="add-btn" data-name="Espresso" data-price="70">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Black coffee</span>
                             <span class="price">75 MZN</span>
+                            <button class="add-btn" data-name="Black coffee" data-price="75">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Coffee & Milk</span>
                             <span class="price">100 MZN</span>
+                            <button class="add-btn" data-name="Coffee & Milk" data-price="100">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Hot chocolate</span>
                             <span class="price">100 MZN</span>
+                            <button class="add-btn" data-name="Hot chocolate" data-price="100">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Mocachino</span>
                             <span class="price">100 MZN</span>
+                            <button class="add-btn" data-name="Mocachino" data-price="100">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Cappuccino</span>
                             <span class="price">100 MZN</span>
+                            <button class="add-btn" data-name="Cappuccino" data-price="100">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Tea (roibos or english)</span>
                             <span class="price">60 MZN</span>
+                            <button class="add-btn" data-name="Tea (roibos or english)" data-price="60">+</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="menu-category">
-                    <h3>COLD DRINKS</h3>
+                    <h3><span class="category-icon">🧊</span> COLD DRINKS</h3>
                     <div class="menu-items">
                         <div class="menu-item">
                             <span class="item-name">Cappy (can)</span>
                             <span class="price">70 MZN</span>
+                            <button class="add-btn" data-name="Cappy (can)" data-price="70">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Cappy (bottle)</span>
                             <span class="price">40 MZN</span>
+                            <button class="add-btn" data-name="Cappy (bottle)" data-price="40">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Ceres juice</span>
                             <span class="price">50 MZN</span>
+                            <button class="add-btn" data-name="Ceres juice" data-price="50">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Soda (can)</span>
                             <span class="price">50 MZN</span>
+                            <button class="add-btn" data-name="Soda (can)" data-price="50">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Soda (bottle)</span>
                             <span class="price">25 MZN</span>
+                            <button class="add-btn" data-name="Soda (bottle)" data-price="25">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Santal 500ml</span>
                             <span class="price">75 MZN</span>
+                            <button class="add-btn" data-name="Santal 500ml" data-price="75">+</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="menu-category">
-                    <h3>TEAS</h3>
+                    <h3><span class="category-icon">🍵</span> TEAS</h3>
                     <div class="menu-items">
                         <div class="menu-item">
                             <span class="item-name">Lemon Tea</span>
                             <span class="price">60 MZN</span>
+                            <button class="add-btn" data-name="Lemon Tea" data-price="60">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Roibos Tea</span>
                             <span class="price">50 MZN</span>
+                            <button class="add-btn" data-name="Roibos Tea" data-price="50">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Ginger Tea</span>
                             <span class="price">50 MZN</span>
+                            <button class="add-btn" data-name="Ginger Tea" data-price="50">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Green Tea</span>
                             <span class="price">50 MZN</span>
+                            <button class="add-btn" data-name="Green Tea" data-price="50">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Mint Tea</span>
                             <span class="price">50 MZN</span>
+                            <button class="add-btn" data-name="Mint Tea" data-price="50">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Indian Tea</span>
                             <span class="price">50 MZN</span>
+                            <button class="add-btn" data-name="Indian Tea" data-price="50">+</button>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="menu-section hidden" id="snacks-section">
-                <h2>SNACKS</h2>
+            <section class="menu-section" id="snacks-section">
                 <div class="menu-category">
-                    <h3>SNACKS</h3>
+                    <h3><span class="category-icon">🥪</span> SNACKS</h3>
                     <div class="menu-items">
                         <div class="menu-item">
-                            <span class="item-name">Pote cake</span>
+                            <span class="item-name">Pot Cake</span>
                             <span class="price">85 MZN</span>
+                            <button class="add-btn" data-name="Pot Cake" data-price="85">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Muffin</span>
                             <span class="price">60 MZN</span>
+                            <button class="add-btn" data-name="Muffin" data-price="60">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Coconut cake</span>
                             <span class="price">85 MZN</span>
+                            <button class="add-btn" data-name="Coconut cake" data-price="85">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Egg sandwich</span>
                             <span class="price">60 MZN</span>
+                            <button class="add-btn" data-name="Egg sandwich" data-price="60">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Ham/Cheese sandwich</span>
                             <span class="price">70 MZN</span>
+                            <button class="add-btn" data-name="Ham/Cheese sandwich" data-price="70">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Chamusa/Rissol/Coxinha</span>
                             <span class="price">80 MZN</span>
+                            <button class="add-btn" data-name="Chamusa/Rissol/Coxinha" data-price="80">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Chips</span>
                             <span class="price">60 MZN</span>
+                            <button class="add-btn" data-name="Chips" data-price="60">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Toast chicken or ham&cheese</span>
                             <span class="price">120 MZN</span>
+                            <button class="add-btn" data-name="Toast chicken or ham&cheese" data-price="120">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Beef or Chicken prego</span>
                             <span class="price">150 MZN</span>
+                            <button class="add-btn" data-name="Beef or Chicken prego" data-price="150">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Hamburger cheese & egg</span>
                             <span class="price">180 MZN</span>
+                            <button class="add-btn" data-name="Hamburger cheese & egg" data-price="180">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Hamburger with cheese</span>
                             <span class="price">135 MZN</span>
+                            <button class="add-btn" data-name="Hamburger with cheese" data-price="135">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Hot dog</span>
                             <span class="price">150 MZN</span>
+                            <button class="add-btn" data-name="Hot dog" data-price="150">+</button>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Wings & chips</span>
                             <span class="price">200 MZN</span>
+                            <button class="add-btn" data-name="Wings & chips" data-price="200">+</button>
                         </div>
                     </div>
                 </div>
@@ -187,7 +228,7 @@
 
         <aside class="cart-container">
             <div class="cart">
-                <h2>Your Order</h2>
+                <h2>Your Order <span class="cart-close-btn">×</span></h2>
                 <div class="cart-items" id="cartItems">
                     <p class="empty-cart-message">Your cart is empty</p>
                 </div>
@@ -198,6 +239,11 @@
                 <button class="checkout-btn" id="checkoutBtn">Checkout</button>
             </div>
         </aside>
+
+        <div class="cart-toggle">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-count">0</span>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
