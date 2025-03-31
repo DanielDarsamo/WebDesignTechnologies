@@ -9,14 +9,23 @@
 <body>
     <div class="container">
         <header>
-            <h1>DELICIAS DA BOLOTA </h1>
-            <h2>CAFETERIA</h2>
-            <h3>Project by Daniel Darsamo </h3>
+            <div class="header-top">
+                <h1>DELICIAS DA BOLOTA</h1>
+                <h2>CAFETERIA</h2>
+                <div class="dark-mode-toggle">
+                    <button id="darkModeToggle">Toggle Dark Mode</button>
+                </div>
+            </div>
+            <h3>Project by Daniel Darsamo</h3>
             <p class="hours">Open Hours: 8 am - 5pm</p>
+            <nav class="category-nav">
+                <button class="category-btn active" data-category="drinks">Drinks</button>
+                <button class="category-btn" data-category="snacks">Snacks</button>
+            </nav>
         </header>
 
         <main>
-            <section class="menu-section">
+            <section class="menu-section" id="drinks-section">
                 <h2>DRINKS</h2>
                 
                 <div class="menu-category">
@@ -112,7 +121,10 @@
                         </div>
                     </div>
                 </div>
+            </section>
 
+            <section class="menu-section hidden" id="snacks-section">
+                <h2>SNACKS</h2>
                 <div class="menu-category">
                     <h3>SNACKS</h3>
                     <div class="menu-items">
@@ -172,6 +184,20 @@
                 </div>
             </section>
         </main>
+
+        <aside class="cart-container">
+            <div class="cart">
+                <h2>Your Order</h2>
+                <div class="cart-items" id="cartItems">
+                    <p class="empty-cart-message">Your cart is empty</p>
+                </div>
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">0 MZN</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+            </div>
+        </aside>
     </div>
     <script src="script.js"></script>
 </body>
