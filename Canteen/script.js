@@ -2,7 +2,7 @@
  * DARSAMO BITES - Enhanced Order System
  * @module OrderManagement
  * @description Handles multi-order functionality with cart management
- * @version 2.0
+ * @version 2.1
  * @author Daniel Darsamo
  */
 
@@ -33,8 +33,6 @@ let state = JSON.parse(localStorage.getItem('darsamoState')) || {
   nextOrderId: 1,
   editingOrderId: null
 };
-
-const menuData = {}; // Keep your existing menuData structure
 
 /* ======================
 * DOM ELEMENTS
@@ -79,6 +77,7 @@ function createNewOrder() {
   state.currentCart = [];
   state.editingOrderId = null;
   
+  showNotification(`Order #${newOrder.id} created successfully!`);
   updateUI();
   persistState();
   return newOrder;
@@ -99,6 +98,7 @@ function addToOrder(orderId) {
   order.timestamp = new Date().toISOString();
   state.currentCart = [];
   
+  showNotification(`Items added to Order #${orderId}!`);
   updateUI();
   persistState();
 }
@@ -110,12 +110,35 @@ function startEditingOrder(orderId) {
   state.editingOrderId = orderId;
   state.currentCart = order.items.map(item => ({...item}));
   elements.cartContainer.classList.add('show-cart');
+  showNotification(`Editing Order #${orderId}...`);
   updateUI();
   persistState();
 }
 
 function calculateTotal(items) {
   return items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+}
+
+/* ======================
+* NOTIFICATION SYSTEM
+* ====================== */
+
+function showNotification(message, type = 'success') {
+  const container = document.querySelector('.notification-container');
+  const notification = document.createElement('div');
+  notification.className = `notification ${type}`;
+  notification.textContent = message;
+  
+  container.appendChild(notification);
+  
+  // Trigger animation
+  setTimeout(() => notification.classList.add('active'), 50);
+  
+  // Auto-remove after 3 seconds
+  setTimeout(() => {
+      notification.classList.remove('active');
+      setTimeout(() => notification.remove(), 300);
+  }, 3000);
 }
 
 /* ======================
@@ -127,7 +150,6 @@ function updateUI() {
   updateOrderDisplay();
   updateMenuAvailability();
   
-  // Update checkout button based on edit state
   if (state.editingOrderId !== null) {
       elements.checkoutBtn.textContent = 'Update Order';
       elements.checkoutBtn.style.backgroundColor = '#ff9800';
@@ -230,7 +252,7 @@ function updateOrderDisplay() {
 }
 
 function updateMenuAvailability() {
-  // Your existing availability logic
+  // Existing availability logic
 }
 
 /* ======================
@@ -271,6 +293,7 @@ function setupEventListeners() {
               });
           }
           
+          // Visual feedback
           this.textContent = '✓';
           this.style.backgroundColor = '#4CAF50';
           setTimeout(() => {
@@ -278,6 +301,7 @@ function setupEventListeners() {
               this.style.backgroundColor = '';
           }, 1000);
           
+          showNotification(`${itemName} added to cart!`);
           updateUI();
           persistState();
       });
@@ -285,7 +309,7 @@ function setupEventListeners() {
 
   elements.checkoutBtn.addEventListener('click', function() {
       if (state.currentCart.length === 0) {
-          alert('Your cart is empty!');
+          showNotification('Your cart is empty!', 'error');
           return;
       }
 
@@ -297,7 +321,7 @@ function setupEventListeners() {
               order.timestamp = new Date().toISOString();
               state.currentCart = [];
               state.editingOrderId = null;
-              alert(`Order #${order.id} updated!`);
+              showNotification(`Order #${order.id} updated successfully!`);
               updateUI();
               persistState();
               return;
@@ -306,12 +330,16 @@ function setupEventListeners() {
 
       if (state.activeOrders.length === 0) {
           createNewOrder();
-          alert(`New order #${state.nextOrderId - 1} created!`);
           return;
       }
 
       const choice = confirm(`Create new order? (OK for new, Cancel to add to existing)`);
-      choice ? createNewOrder() : showOrderSelection();
+      if (choice) {
+          createNewOrder();
+      } else {
+          showNotification('Select an order to add items to', 'info');
+          showOrderSelection();
+      }
   });
 
   elements.cartToggle.addEventListener('click', () => {
@@ -330,9 +358,8 @@ function showOrderSelection() {
   
   if (orderId && state.activeOrders.some(o => o.id === parseInt(orderId))) {
       addToOrder(parseInt(orderId));
-      alert(`Added to order #${orderId}!`);
   } else {
-      alert('Invalid order selection');
+      showNotification('Invalid order selection', 'error');
   }
 }
 
