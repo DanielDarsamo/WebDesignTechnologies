@@ -504,6 +504,29 @@
      color: #aaa;
  }
  
+ /* Edit Order Button Styles */
+ .edit-order-btn {
+     background: var(--warning-color);
+     color: #856404;
+     border: none;
+     padding: 0.3rem 0.6rem;
+     border-radius: 4px;
+     cursor: pointer;
+     font-size: 0.9rem;
+     transition: all 0.2s;
+     margin-right: 0.5rem;
+ }
+ 
+ .edit-order-btn:hover {
+     background: #ffd54f;
+     transform: translateY(-1px);
+ }
+ 
+ .order-actions {
+     display: flex;
+     gap: 0.5rem;
+ }
+ 
  /* Cart Styles */
  .cart-toggle {
      position: fixed;
@@ -757,6 +780,12 @@
      }
  
      .order-items {
+         font-size: 0.8rem;
+     }
+ 
+     /* Mobile-specific edit button adjustments */
+     .edit-order-btn {
+         padding: 0.2rem 0.5rem;
          font-size: 0.8rem;
      }
  }
