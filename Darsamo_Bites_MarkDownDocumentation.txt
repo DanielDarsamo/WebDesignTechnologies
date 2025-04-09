@@ -1,0 +1,101 @@
+# DARSAMO BITES - Feature Documentation
+
+## Current Features
+
+### 1. Menu System
+- **Categorized Display**: Drinks (Coffee, Cold Drinks, Teas) and Snacks
+- **Dynamic Filtering**: Switch between categories with animations
+- **Item Details**: Name, price, and add-to-cart button per item
+
+### 2. Cart Functionality
+- **Add/Remove Items**: Adjust quantities with +/- buttons
+- **Real-time Total**: Automatically calculates order total
+- **Visual Feedback**: Cart counter updates instantly
+
+### 3. User Experience
+- **Dark Mode**: Toggle with localStorage memory
+- **Mobile Responsive**: Works on phones/tablets
+- **Animations**: Smooth transitions between sections
+
+### 4. Technical Implementation
+- **Frontend**: Pure HTML/CSS/JS (no frameworks)
+- **State Management**: 
+  - `menuData` object for items
+  - `cart` array for orders
+- **Persistence**: Dark mode preference saved in localStorage
+
+## Code Structure
+
+### Key Files:
+1. `index.html` - Main layout
+2. `style.css` - Styling with CSS variables
+3. `script.js` - All interactive logic
+
+### Core Functions:
+| Function             | Purpose                          |
+|----------------------|----------------------------------|
+| `initializeMenu()`   | Loads menu items                 |
+| `updateCartDisplay()`| Refreshes cart UI                |
+| `addToCart()`        | Handles item additions           |
+
+
+
+
+# DARSAMO BITES - Feature Documentation (v2.0)
+
+## Current Features
+
+### 1. Enhanced Order System
+- **Multi-Order Management**: 
+  - Create multiple active orders
+  - Edit pending ("preparing") orders
+  - Merge carts into existing orders
+- **Order Tracking**:
+  - Order status indicators (preparing/completed)
+  - Timestamp tracking
+  - Recent items preview
+
+### 2. Advanced Cart Functionality
+- **Edit Mode**: 
+  - Load existing orders into cart for modification
+  - Quantity adjustment with +/- buttons
+  - Visual edit state indicators
+- **Real-time Updates**:
+  - Automatic total calculation
+  - Cart counter synced across UI
+  - Price breakdown per item
+
+### 3. Notification System
+- **Action Feedback**:
+  - Success toasts for completed operations
+  - Error alerts for invalid actions
+  - Info messages for system status
+- **Visual Features**:
+  - Auto-disappearing after 3s
+  - Progress bar animation
+  - Mobile-optimized positioning
+
+### 4. Enhanced User Experience
+- **State Persistence**:
+  - Dark mode preference
+  - Active orders
+  - Cart contents
+  - Edit states
+- **Accessibility**:
+  - ARIA live regions for notifications
+  - Semantic HTML structure
+  - Keyboard-navigable controls
+- **Animations**:
+  - Smooth category transitions
+  - Cart sliding panel
+  - Notification entrances/exits
+
+### 5. Technical Implementation
+- **State Management**:
+  ```javascript
+  {
+    activeOrders: Array<Order>,
+    currentCart: Array<CartItem>,
+    nextOrderId: number,
+    editingOrderId: ?number
+  }
