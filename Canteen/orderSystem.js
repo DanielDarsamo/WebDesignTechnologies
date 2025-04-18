@@ -197,11 +197,11 @@ class OrderSystem {
      */
     calculatePreparationTime(category) {
         const times = {
-            'drinks': 5 * 60 * 1000,    // 5 minutes
-            'snacks': 10 * 60 * 1000,   // 10 minutes
-            'mixed': 15 * 60 * 1000     // 15 minutes
+            'drinks': 5 * 1000,    // 5 seconds for demo
+            'snacks': 5 * 1000,    // 5 seconds for demo
+            'mixed': 20 * 1000     // 20 seconds for demo
         };
-        return times[category] || 5 * 60 * 1000;
+        return times[category] || 5 * 1000;
     }
 
     /**
@@ -265,7 +265,8 @@ class OrderSystem {
         this.state.currentCart = [];
         this.state.editingOrderId = null;
         
-        setTimeout(() => this.startOrderTimer(newOrder), 1000);
+        // Start timer after a short delay to show pending state
+        setTimeout(() => this.startOrderTimer(newOrder), 2000);
         
         this.persistState();
         return newOrder;
@@ -292,13 +293,14 @@ class OrderSystem {
         order.category = this.determineOrderCategory();
         order.total = this.calculateTotal(order.items);
         order.createdAt = Date.now();
+        order.status = 'pending';
         
         // Clear cart
         this.state.currentCart = [];
         
-        // Restart timer
+        // Restart timer after a short delay to show pending state
         this.clearOrderTimer(orderId);
-        this.startOrderTimer(order);
+        setTimeout(() => this.startOrderTimer(order), 2000);
         
         this.persistState();
         return order;
@@ -352,10 +354,11 @@ class OrderSystem {
         order.total = this.calculateTotal(order.items);
         order.createdAt = Date.now();
         order.category = this.determineOrderCategory();
+        order.status = 'pending';
         
-        // Restart timer
+        // Restart timer after a short delay
         this.clearOrderTimer(order.id);
-        this.startOrderTimer(order);
+        setTimeout(() => this.startOrderTimer(order), 2000);
         
         // Clear editing state
         this.state.currentCart = [];
