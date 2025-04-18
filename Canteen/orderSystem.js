@@ -413,7 +413,6 @@ class OrderSystem {
     isEditingOrder() {
         return this.state.editingOrderId !== null;
     }
-
     /**
      * Get ID of order being edited
      * @returns {number|null} Order ID or null
