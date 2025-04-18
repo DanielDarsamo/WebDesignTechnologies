@@ -20,8 +20,14 @@
                     </div>
                 </div>
                 <div class="header-controls">
-                    <div class="language-toggle-container">
-                        <button class="language-toggle" id="languageToggle">PT/EN</button>
+                    <div class="language-switch-wrapper">
+                        <label class="language-switch">
+                            <input type="checkbox" id="languageToggle">
+                            <span class="sliderlan">
+                                <span class="language-label left">EN</span>
+                                <span class="language-label right">PT</span>
+                            </span>
+                        </label>
                     </div>
                     <div class="dark-mode-toggle-container">
                         <label class="dark-mode-toggle">
@@ -41,7 +47,6 @@
                 <button class="category-btn" data-category="snacks" data-translate="snacks">Snacks</button>
             </nav>
         </header
-
         <main>
             <section class="menu-section active-section" id="drinks-section">
                 <div class="menu-category">
