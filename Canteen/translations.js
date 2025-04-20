@@ -1,7 +1,7 @@
 /**
  * DARSAMO BITES - Language Translations
  * @version 1.0.0
- * @description Centralized translations for multilingual support
+ * @description Centralized translations for multilingual support between Portuguese and English
  */
 
 const translations = {
