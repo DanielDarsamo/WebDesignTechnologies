@@ -51,7 +51,7 @@ const translations = {
     },
     pt: {
         title: "Darsamo Bites",
-        subtitle: "Café e Padaria",
+        subtitle: "Café e Pastelaria",
         pickupBanner: "Retirada na Loja",
         coffee: "Café",
         tea: "Chá",
