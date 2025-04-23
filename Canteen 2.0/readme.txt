@@ -26,5 +26,5 @@ File Structure:
 │   ├── order.js       # Order management
 │   ├── translations.js # Language support
 │   └── ui.js          # UI controllers and rendering
-└── assets/
+└──
     └── logo.png       # App logo

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darsamo Bites - Coffee & Bakery</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <div class="logo-container">
+                    <div class="logo">
+                        <img src="assets/logo.png" alt="Darsamo Bites Logo" class="logo-img">
+                    </div>
+                    <div class="brand">
+                        <h1 data-translate="title">Darsamo Bites</h1>
+                        <p data-translate="subtitle">Coffee & Bakery</p>
+                    </div>
+                </div>
+                <div class="header-controls">
+                    <div class="language-switch">
+                        <label for="languageToggle" class="toggle-label">
+                            <input type="checkbox" id="languageToggle">
+                            <span class="toggle-slider">
+                                <span class="toggle-option">EN</span>
+                                <span class="toggle-option">PT</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="dark-mode-toggle">
+                        <label for="darkModeToggle" class="toggle-label">
+                            <input type="checkbox" id="darkModeToggle">
+                            <span class="toggle-slider">
+                                <span class="toggle-icon sun">☀️</span>
+                                <span class="toggle-icon moon">🌙</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="pickup-banner">
+                <span class="pickup-icon">🏬</span>
+                <p data-translate="pickupBanner">In-Store Pickup</p>
+            </div>
+        </header>
+
+        <!-- Category Navigation -->
+        <nav class="category-nav">
+            <button class="category-btn active" data-category="coffee" data-translate="coffee">Coffee</button>
+            <button class="category-btn" data-category="tea" data-translate="tea">Tea</button>
+            <button class="category-btn" data-category="pastries" data-translate="pastries">Pastries</button>
+            <button class="category-btn" data-category="desserts" data-translate="desserts">Desserts</button>
+            <button class="category-btn" data-category="cold" data-translate="coldDrinks">Cold Drinks</button>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Coffee Section -->
+            <section class="menu-section active" id="coffee-section">
+                <div class="menu-items">
+                    <div class="menu-item" data-id="1">
+                        <div class="item-img">
+                            <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg" alt="Espresso">
+                            <button class="favorite-btn">❤</button>
+                        </div>
+                        <div class="item-info">
+                            <h3>Espresso</h3>
+                            <p class="item-desc">Rich, full-bodied shot</p>
+                            <div class="item-footer">
+                                <span class="price">$3.50</span>
+                                <button class="add-btn" data-id="1" data-name="Espresso" data-price="3.50">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-id="2">
+                        <div class="item-img">
+                            <img src="https://images.pexels.com/photos/350478/pexels-photo-350478.jpeg" alt="Cappuccino">
+                            <button class="favorite-btn">❤</button>
+                        </div>
+                        <div class="item-info">
+                            <h3>Cappuccino</h3>
+                            <p class="item-desc">Espresso with steamed milk foam</p>
+                            <div class="item-footer">
+                                <span class="price">$4.25</span>
+                                <button class="add-btn" data-id="2" data-name="Cappuccino" data-price="4.25">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-id="3">
+                        <div class="item-img">
+                            <img src="https://images.pexels.com/photos/3020323/pexels-photo-3020323.jpeg" alt="Latte">
+                            <button class="favorite-btn">❤</button>
+                        </div>
+                        <div class="item-info">
+                            <h3>Latte</h3>
+                            <p class="item-desc">Espresso with steamed milk</p>
+                            <div class="item-footer">
+                                <span class="price">$4.50</span>
+                                <button class="add-btn" data-id="3" data-name="Latte" data-price="4.50">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-id="4">
+                        <div class="item-img">
+                            <img src="https://images.pexels.com/photos/434213/pexels-photo-434213.jpeg" alt="Mocha">
+                            <button class="favorite-btn">❤</button>
+                        </div>
+                        <div class="item-info">
+                            <h3>Mocha</h3>
+                            <p class="item-desc">Espresso with chocolate and milk</p>
+                            <div class="item-footer">
+                                <span class="price">$4.75</span>
+                                <button class="add-btn" data-id="4" data-name="Mocha" data-price="4.75">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tea Section -->
+            <section class="menu-section" id="tea-section">
+                <div class="menu-items">
+                    <div class="menu-item" data-id="5">
+                        <div class="item-img">
+                            <img src="https://images.pexels.com/photos/1793035/pexels-photo-1793035.jpeg" alt="Herbal Tea">
+                            <button class="favorite-btn">❤</button>
+                        </div>
+                        <div class="item-info">
+                            <h3>Herbal Tea</h3>
+                            <p class="item-desc">Soothing herbal blend</p>
+                            <div class="item-footer">
+                                <span class="price">$3.25</span>
+                                <button class="add-btn" data-id="5" data-name="Herbal Tea" data-price="3.25">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-id="6">
+                        <div class="item-img">
+                            <img src="https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg" alt="Chai">
+                            <button class="favorite-btn">❤</button>
+                        </div>
+                        <div class="item-info">
+                            <h3>Chai</h3>
+                            <p class="item-desc">Spiced tea with milk</p>
+                            <div class="item-footer">
+                                <span class="price">$4.00</span>
+                                <button class="add-btn" data-id="6" data-name="Chai" data-price="4.00">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-id="7">
+                        <div class="item-img">
+                            <img src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg" alt="Matcha">
+                            <button class="favorite-btn">❤</button>
+                        </div>
+                        <div class="item-info">
+                            <h3>Matcha</h3>
+                            <p class="item-desc">Green tea powder with milk</p>
+                            <div class="item-footer">
+                                <span class="price">$4.50</span>
+                                <button class="add-btn" data-id="7" data-name="Matcha" data-price="4.50">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pastries Section -->
+            <section class="menu-section" id="pastries-section">
+                <div class="menu-items">
+                    <div class="menu-item" data-id="8">
+                        <div class="item-img">
+                            <img src="https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg" alt="Croissant">
+                            <button class="favorite-btn">❤</button>
+                        </div>
+                        <div class="item-info">
+                            <h3>Croissant</h3>
+                            <p class="item-desc">Buttery, flaky pastry</p>
+                            <div class="item-footer">
+                                <span class="price">$3.25</span>
+                                <button class="add-btn" data-id="8" data-name="Croissant" data-price="3.25">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-id="9">
+                        <div class="item-img">
+                            <img src="https://images.pexels.com/photos/3650438/pexels-photo-3650438.jpeg" alt="Muffin">
+                            <button class="favorite-btn">❤</button>
+                        </div>
+                        <div class="item-info">
+                            <h3>Muffin</h3>
+                            <p class="item-desc">Blueberry or chocolate chip</p>
+                            <div class="item-footer">
+                                <span class="price">$3.50</span>
+                                <button class="add-btn" data-id="9" data-name="Muffin" data-price="3.50">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-id="10">
+                        <div class="item-img">
+                            <img src="https://images.pexels.com/photos/267308/pexels-photo-267308.jpeg" alt="Cinnamon Roll">
+                            <button class="favorite-btn">❤</button>
+                        </div>
+                        <div class="item-info">
+                            <h3>Cinnamon Roll</h3>
+                            <p class="item-desc">Sweet roll with cinnamon and icing</p>
+                            <div class="item-footer">
+                                <span class="price">$4.00</span>
+                                <button class="add-btn" data-id="10" data-name="Cinnamon Roll" data-price="4.00">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Desserts Section -->
+            <section class="menu-section" id="desserts-section">
+                <div class="menu-items">
+                    <div class="menu-item" data-id="11">
+                        <div class="item-img">
+                            <img src="https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg" alt="Cheesecake">
+                            <button class="favorite-btn">❤</button>
+                        </div>
+                        <div class="item-info">
+                            <h3>Cheesecake</h3>
+                            <p class="item-desc">Creamy classic cheesecake</p>
+                            <div class="item-footer">
+                                <span class="price">$5.50</span>
+                                <button class="add-btn" data-id="11" data-name="Cheesecake" data-price="5.50">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-id="12">
+                        <div class="item-img">
+                            <img src="https://images.pexels.com/photos/6341164/pexels-photo-6341164.jpeg" alt="Tiramisu">
+                            <button class="favorite-btn">❤</button>
+                        </div>
+                        <div class="item-info">
+                            <h3>Tiramisu</h3>
+                            <p class="item-desc">Coffee-flavored Italian dessert</p>
+                            <div class="item-footer">
+                                <span class="price">$5.75</span>
+                                <button class="add-btn" data-id="12" data-name="Tiramisu" data-price="5.75">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-id="13">
+                        <div class="item-img">
+                            <img src="https://images.pexels.com/photos/239581/pexels-photo-239581.jpeg" alt="Macarons">
+                            <button class="favorite-btn">❤</button>
+                        </div>
+                        <div class="item-info">
+                            <h3>Macarons</h3>
+                            <p class="item-desc">Assorted French cookies</p>
+                            <div class="item-footer">
+                                <span class="price">$2.50</span>
+                                <button class="add-btn" data-id="13" data-name="Macarons" data-price="2.50">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cold Drinks Section -->
+            <section class="menu-section" id="cold-section">
+                <div class="menu-items">
+                    <div class="menu-item" data-id="14">
+                        <div class="item-img">
+                            <img src="https://images.pexels.com/photos/2396220/pexels-photo-2396220.jpeg" alt="Iced Coffee">
+                            <button class="favorite-btn">❤</button>
+                        </div>
+                        <div class="item-info">
+                            <h3>Iced Coffee</h3>
+                            <p class="item-desc">Cold brewed coffee over ice</p>
+                            <div class="item-footer">
+                                <span class="price">$4.00</span>
+                                <button class="add-btn" data-id="14" data-name="Iced Coffee" data-price="4.00">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-id="15">
+                        <div class="item-img">
+                            <img src="https://images.pexels.com/photos/2109099/pexels-photo-2109099.jpeg" alt="Lemonade">
+                            <button class="favorite-btn">❤</button>
+                        </div>
+                        <div class="item-info">
+                            <h3>Lemonade</h3>
+                            <p class="item-desc">Fresh-squeezed with mint</p>
+                            <div class="item-footer">
+                                <span class="price">$3.75</span>
+                                <button class="add-btn" data-id="15" data-name="Lemonade" data-price="3.75">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-id="16">
+                        <div class="item-img">
+                            <img src="https://images.pexels.com/photos/6045219/pexels-photo-6045219.jpeg" alt="Smoothie">
+                            <button class="favorite-btn">❤</button>
+                        </div>
+                        <div class="item-info">
+                            <h3>Smoothie</h3>
+                            <p class="item-desc">Mixed berry or tropical</p>
+                            <div class="item-footer">
+                                <span class="price">$5.25</span>
+                                <button class="add-btn" data-id="16" data-name="Smoothie" data-price="5.25">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Item Detail Modal -->
+        <div class="modal" id="itemDetailModal">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <div class="modal-body">
+                    <div class="item-detail-img">
+                        <img src="" alt="" id="modalItemImg">
+                        <button class="modal-favorite-btn">❤</button>
+                    </div>
+                    <div class="item-detail-info">
+                        <h2 id="modalItemName"></h2>
+                        <div class="item-meta">
+                            <span class="calories"><span id="modalItemCalories">220</span> cal</span>
+                            <span class="prep-time"><span id="modalItemTime">5</span> min</span>
+                        </div>
+                        <div class="item-ingredients">
+                            <h3 data-translate="ingredients">Ingredients</h3>
+                            <div class="ingredients-list" id="modalIngredients">
+                                <!-- Ingredients will be filled dynamically -->
+                            </div>
+                        </div>
+                        <div class="item-description">
+                            <h3 data-translate="description">Description</h3>
+                            <p id="modalItemDesc"></p>
+                        </div>
+                        <div class="item-detail-footer">
+                            <div class="item-price">
+                                <span data-translate="price">Price</span>
+                                <span id="modalItemPrice"></span>
+                            </div>
+                            <div class="quantity-control">
+                                <button class="quantity-btn minus" id="decreaseQuantity">-</button>
+                                <span id="itemQuantity">1</span>
+                                <button class="quantity-btn plus" id="increaseQuantity">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" id="addToCartBtn" data-translate="addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Sidebar -->
+        <div class="cart-sidebar" id="cartSidebar">
+            <div class="cart-header">
+                <h2 data-translate="cart">Cart</h2>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be populated dynamically -->
+                <p class="empty-cart" data-translate="emptyCart">Your cart is empty</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span data-translate="total">Total</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn" data-translate="checkout">Checkout</button>
+            </div>
+        </div>
+
+        <!-- Active Order Panel -->
+        <div class="active-order-panel" id="activeOrderPanel">
+            <div class="panel-header">
+                <h2 data-translate="activeOrder">Active Order</h2>
+                <button class="close-panel">&times;</button>
+            </div>
+            <div class="order-progress">
+                <div class="progress-step current" data-step="pending">
+                    <div class="step-icon">📝</div>
+                    <div class="step-label" data-translate="pending">Pending</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="preparing">
+                    <div class="step-icon">👨‍🍳</div>
+                    <div class="step-label" data-translate="preparing">Preparing</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="ready">
+                    <div class="step-icon">✅</div>
+                    <div class="step-label" data-translate="ready">Ready</div>
+                </div>
+            </div>
+            <div class="order-details">
+                <h3 data-translate="orderItems">Order Items</h3>
+                <div class="order-items" id="activeOrderItems">
+                    <!-- Will be filled dynamically -->
+                </div>
+                <div class="order-total">
+                    <span data-translate="total">Total</span>
+                    <span id="activeOrderTotal">$0.00</span>
+                </div>
+                <div class="estimated-time">
+                    <span data-translate="estimatedTime">Estimated Ready Time</span>
+                    <span id="estimatedTime">--:--</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-item active" data-page="home">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label" data-translate="home">Home</span>
+            </button>
+            <button class="nav-item" data-page="favorites">
+                <span class="nav-icon">❤️</span>
+                <span class="nav-label" data-translate="favorites">Favorites</span>
+            </button>
+            <button class="nav-item" data-page="cart" id="cartNavBtn">
+                <span class="nav-icon">🛒</span>
+                <span class="nav-label" data-translate="cart">Cart</span>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </button>
+            <button class="nav-item" data-page="order" id="orderNavBtn">
+                <span class="nav-icon">📋</span>
+                <span class="nav-label" data-translate="order">Order</span>
+            </button>
+        </nav>
+
+        <!-- Notification Container -->
+        <div class="notification-container" id="notificationContainer"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/translations.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/order.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
