@@ -121,7 +121,7 @@ const UIController = (function() {
             DOMElements.modalItemImg.alt = itemData.name;
             DOMElements.modalItemName.textContent = itemData.name;
             DOMElements.modalItemDesc.textContent = itemData.longDescription;
-            DOMElements.modalItemPrice.textContent = `$${itemData.price.toFixed(2)}`;
+            DOMElements.modalItemPrice.textContent = `${itemData.price.toFixed(2)} mzn `;
             DOMElements.modalItemCalories.textContent = itemData.calories;
             DOMElements.modalItemTime.textContent = itemData.prepTime;
             DOMElements.itemQuantity.textContent = currentQuantity;
@@ -200,7 +200,7 @@ const UIController = (function() {
             // If cart is empty
             if (cart.length === 0) {
                 cartItemsEl.innerHTML = `<p class="empty-cart">${translations[currentLanguage].emptyCart}</p>`;
-                cartTotalEl.textContent = '$0.00';
+                cartTotalEl.textContent = '0.00mzn';
                 return;
             }
             
@@ -219,7 +219,7 @@ const UIController = (function() {
                     </div>
                     <div class="cart-item-info">
                         <div class="cart-item-name">${item.name}</div>
-                        <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+                        <div class="cart-item-price">${item.price.toFixed(2)} mzn</div>
                         <div class="cart-item-quantity">
                             <button class="cart-quantity-btn minus" data-id="${item.id}">-</button>
                             <span>${item.quantity}</span>
@@ -232,7 +232,7 @@ const UIController = (function() {
             });
             
             // Update total
-            cartTotalEl.textContent = `$${totalPrice.toFixed(2)}`;
+            cartTotalEl.textContent = `${totalPrice.toFixed(2)} mzn`;
             
             // Add event listeners to quantity buttons
             cartItemsEl.querySelectorAll('.cart-quantity-btn.minus').forEach(btn => {
