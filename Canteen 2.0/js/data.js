@@ -140,9 +140,9 @@ const menuData = {
                 { name: "Sugar", icon: "🍬" },
                 { name: "Butter", icon: "🧈" },
                 { name: "Eggs", icon: "🥚" },
-                { name: "Blueberries/Chocolate", icon: "🫐" }
+                { name: "Chocolate", icon: "🫐" }
             ],
-            longDescription: "Our muffins are baked fresh every morning with your choice of juicy blueberries or rich chocolate chips, creating a moist and delicious treat."
+            longDescription: "Our muffins are baked fresh every morning with rich chocolate chips, creating a moist and delicious treat."
         },
         {
             id: 10,
