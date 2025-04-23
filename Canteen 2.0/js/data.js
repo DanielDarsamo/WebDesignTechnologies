@@ -37,7 +37,7 @@ const menuData = {
             name: "Latte",
             description: "Espresso with steamed milk",
             price: 100,
-            image: "https://images.pexels.com/photos/3020323/pexels-photo-3020323.jpeg",
+            image: "https://images.pexels.com/photos/2396220/pexels-photo-2396220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             calories: 190,
             prepTime: 4,
             ingredients: [
@@ -84,7 +84,7 @@ const menuData = {
             name: "Chai",
             description: "Spiced tea with milk",
             price: 80,
-            image: "https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg",
+            image: "https://images.pexels.com/photos/5946623/pexels-photo-5946623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             calories: 150,
             prepTime: 5,
             ingredients: [
@@ -99,7 +99,7 @@ const menuData = {
             name: "Matcha",
             description: "Green tea powder with milk",
             price: 150,
-            image: "https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg",
+            image: "https://images.pexels.com/photos/28730007/pexels-photo-28730007/free-photo-of-artistic-matcha-latte-with-leaf-design.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             calories: 130,
             prepTime: 4,
             ingredients: [
@@ -130,7 +130,7 @@ const menuData = {
         {
             id: 9,
             name: "Muffin",
-            description: "Blueberry or chocolate chip",
+            description: "chocolate chip",
             price: 80,
             image: "https://images.pexels.com/photos/3650438/pexels-photo-3650438.jpeg",
             calories: 420,
@@ -184,7 +184,7 @@ const menuData = {
             name: "Tiramisu",
             description: "Coffee-flavored Italian dessert",
             price: 300,
-            image: "https://images.pexels.com/photos/6341164/pexels-photo-6341164.jpeg",
+            image: "https://images.pexels.com/photos/2138849/pexels-photo-2138849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             calories: 380,
             prepTime: 0,
             ingredients: [
@@ -247,18 +247,18 @@ const menuData = {
         {
             id: 16,
             name: "Smoothie",
-            description: "Mixed berry or tropical",
+            description: "Mixed berry",
             price: 100,
-            image: "https://images.pexels.com/photos/6045219/pexels-photo-6045219.jpeg",
+            image: "https://images.pexels.com/photos/2424034/pexels-photo-2424034.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             calories: 230,
             prepTime: 4,
             ingredients: [
-                { name: "Fresh fruits", icon: "🍓" },
+                { name: "Fresh Berries", icon: "🍓" },
                 { name: "Yogurt", icon: "🥣" },
                 { name: "Ice", icon: "🧊" },
                 { name: "Honey", icon: "🍯" }
             ],
-            longDescription: "Our smoothies are blended with fresh fruits, creamy yogurt, and a touch of honey. Choose between our mixed berry blend or tropical fruit mixture for a refreshing and nutritious treat."
+            longDescription: "Our smoothies are blended with fresh fruits, creamy yogurt, and a touch of honey. With our fresh mixed berry blend for a refreshing and nutritious treat."
         }
     ]
 };

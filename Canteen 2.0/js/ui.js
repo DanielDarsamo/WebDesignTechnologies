@@ -274,14 +274,14 @@ const UIController = (function() {
                 orderItemEl.className = 'order-item';
                 orderItemEl.innerHTML = `
                     <span>${item.name} × ${item.quantity}</span>
-                    <span>$${(item.price * item.quantity).toFixed(2)}</span>
+                    <span>${(item.price * item.quantity).toFixed(2)} mzn</span>
                 `;
                 
                 orderItemsEl.appendChild(orderItemEl);
             });
             
             // Update order total
-            DOMElements.activeOrderTotal.textContent = `$${order.total.toFixed(2)}`;
+            DOMElements.activeOrderTotal.textContent = `${order.total.toFixed(2)} mzn`;
             
             // Update estimated time
             const estimatedTime = new Date(order.estimatedReadyTime);
