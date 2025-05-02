@@ -30,7 +30,7 @@ const UIController = (function() {
         // Menu items
         menuItems: document.querySelectorAll('.menu-item'),
         addBtns: document.querySelectorAll('.add-btn'),
-        favoriteBtns: document.querySelectorAll('.favorite-btn'),
+        
         
         // Modal elements
         itemDetailModal: document.getElementById('itemDetailModal'),
@@ -42,7 +42,7 @@ const UIController = (function() {
         modalItemCalories: document.getElementById('modalItemCalories'),
         modalItemTime: document.getElementById('modalItemTime'),
         modalIngredients: document.getElementById('modalIngredients'),
-        modalFavoriteBtn: document.querySelector('.modal-favorite-btn'),
+      
         decreaseQuantityBtn: document.getElementById('decreaseQuantity'),
         increaseQuantityBtn: document.getElementById('increaseQuantity'),
         itemQuantity: document.getElementById('itemQuantity'),
@@ -126,13 +126,7 @@ const UIController = (function() {
             DOMElements.modalItemTime.textContent = itemData.prepTime;
             DOMElements.itemQuantity.textContent = currentQuantity;
             
-            // Check if item is in favorites
-            const isFavorite = FavoritesController.isFavorite(itemData.id);
-            if (isFavorite) {
-                DOMElements.modalFavoriteBtn.classList.add('active');
-            } else {
-                DOMElements.modalFavoriteBtn.classList.remove('active');
-            }
+            
             
             // Update add to cart button with item id
             DOMElements.addToCartBtn.setAttribute('data-id', itemData.id);
@@ -337,20 +331,7 @@ const UIController = (function() {
             }
         },
         
-        // Update favorites UI
-        updateFavoritesUI: function(favorites) {
-            // Update favorite buttons in menu
-            DOMElements.favoriteBtns.forEach(btn => {
-                const menuItem = btn.closest('.menu-item');
-                const itemId = parseInt(menuItem.getAttribute('data-id'));
-                
-                if (favorites.includes(itemId)) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-        },
+        
         
         // Get current item and quantity
         getCurrentItemDetails: function() {

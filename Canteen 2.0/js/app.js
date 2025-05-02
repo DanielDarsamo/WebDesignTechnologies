@@ -1,7 +1,7 @@
 /**
  * Main Application Module
  */
-const App = (function(UI, Cart, Favorites, Order) {
+const App = (function(UI, Cart,Order) {
     // DOM elements
     const DOM = UI.getDOMElements();
     
@@ -94,38 +94,8 @@ const App = (function(UI, Cart, Favorites, Order) {
             }
         });
         
-        // Favorite buttons
-        DOM.favoriteBtns.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.stopPropagation(); // Prevent opening modal
-                
-                const itemId = parseInt(this.closest('.menu-item').getAttribute('data-id'));
-                Favorites.toggleFavorite(itemId);
-                
-                // Update button state
-                if (Favorites.isFavorite(itemId)) {
-                    this.classList.add('active');
-                } else {
-                    this.classList.remove('active');
-                }
-            });
-        });
-        
-        // Modal favorite button
-        DOM.modalFavoriteBtn.addEventListener('click', function() {
-            const { item } = UI.getCurrentItemDetails();
-            
-            if (item) {
-                Favorites.toggleFavorite(item.id);
-                
-                // Update button state
-                if (Favorites.isFavorite(item.id)) {
-                    this.classList.add('active');
-                } else {
-                    this.classList.remove('active');
-                }
-            }
-        });
+      
+
         
         // Toggle cart sidebar
         DOM.cartNavBtn.addEventListener('click', () => UI.toggleCart(true));
@@ -203,7 +173,6 @@ const App = (function(UI, Cart, Favorites, Order) {
         
         // Initialize controllers
         Cart.init();
-        Favorites.init();
         Order.init();
         
         // Set initial language
@@ -219,7 +188,7 @@ const App = (function(UI, Cart, Favorites, Order) {
     return {
         init: init
     };
-})(UIController, CartController, FavoritesController, OrderController);
+})(UIController, CartController, OrderController);
 
 // Initialize app when DOM is loaded
 document.addEventListener('DOMContentLoaded', App.init);
